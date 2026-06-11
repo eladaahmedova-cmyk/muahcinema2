@@ -501,14 +501,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // ══════════════════════════════════════════════
 let allBookings = [];
 
-async function loadSeatsData() {
+async function loadSeatsData()async function loadSeatsData() {
   try {
-    const res = await fetch(SETTINGS.scriptUrl + '?action=getSeats');
-    const data = await res.json();
-    allBookings = data.bookings || [];
-    updateSeatsBadge(data.bookings || []);
+    const res = await fetch(SETTINGS.scriptUrl + '?action=getSeats', {mode: 'no-cors'});
+    updateSeatsBadge([]);
   } catch(e) {
-    document.getElementById('js-seats-badge').textContent = SETTINGS.totalSeats + ' мест';
     updateSeatsBadge([]);
   }
 }
@@ -592,32 +589,12 @@ async function submitBooking() {
   const fullName = name + ' ' + surname;
 
   try {
-    const res = await fetch(SETTINGS.scriptUrl, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        action: 'book',
-        seatId: 'FREE',
-        name: fullName,
-        phone, email, code,
-        film: SETTINGS.filmTitle,
-        date: SETTINGS.date,
-        time: SETTINGS.time,
-        price: SETTINGS.price
-      })
-    });
-    const data = await res.json();
-    if (data.ok) {
-      showTicket({ code, name: fullName, phone, email, film: SETTINGS.filmTitle, date: SETTINGS.date, time: SETTINGS.time, price: SETTINGS.price });
-      loadSeatsData();
-    } else {
-      showToast(data.error || 'Ошибка. Попробуйте ещё раз.');
-      btn.disabled = false; btn.textContent = 'ПОДТВЕРДИТЬ';
-    }
-  } catch(e) {
-    showToast('Ошибка соединения');
-    btn.disabled = false; btn.textContent = 'ПОДТВЕРДИТЬ';
-  }
+  await fetch(SETTINGS.scriptUrl + '?action=book&name=' + encodeURIComponent(fullName) + '&phone=' + encodeURIComponent(phone) + '&email=' + encodeURIComponent(email) + '&code=' + code + '&film=' + encodeURIComponent(SETTINGS.filmTitle) + '&date=' + encodeURIComponent(SETTINGS.date) + '&time=' + encodeURIComponent(SETTINGS.time) + '&price=' + SETTINGS.price, {mode: 'no-cors'});
+  showTicket({ code, name: fullName, phone, email, film: SETTINGS.filmTitle, date: SETTINGS.date, time: SETTINGS.time, price: SETTINGS.price });
+  loadSeatsData();
+} catch(e) {
+  showToast('Ошибка соединения');
+  btn.disabled = false; btn.textContent = 'ПОДТВЕРДИТЬ';
 }
 
 function genCode() {
