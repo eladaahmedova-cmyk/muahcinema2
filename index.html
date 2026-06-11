@@ -38,16 +38,9 @@ body::after {
   pointer-events: none; z-index: 0;
 }
 .wrap { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; padding: 0 16px 100px; }
-
-/* ── HEADER ── */
 header { text-align: center; padding: 52px 0 36px; }
-.logo-mark {
-  width: 48px; height: 48px; margin: 0 auto 16px;
-  border: 1px solid rgba(201,168,76,0.35);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-}
-.logo-mark svg { width: 24px; height: 24px; opacity: 0.7; }
-.header-eyebrow { font-size: 10px; letter-spacing: 7px; color: var(--gold); text-transform: uppercase; margin-bottom: 12px; display: block; }
+.logo-mark { width: 140px; height: 140px; margin: 0 auto 16px; border: none; background: none; display: flex; align-items: center; justify-content: center; }
+.logo-mark img { width: 100%; height: 100%; object-fit: contain; }
 .header-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(40px, 9vw, 68px);
@@ -58,30 +51,22 @@ header { text-align: center; padding: 52px 0 36px; }
 }
 .header-sub { font-family: 'Playfair Display', serif; font-style: italic; font-size: 14px; color: var(--muted); letter-spacing: 2px; margin-bottom: 20px; }
 .divider { width: 60px; height: 1px; background: var(--gold); margin: 0 auto 20px; opacity: 0.5; }
-
-/* ── SHOW INFO STRIP ── */
 .show-strip {
   display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
   font-size: 12px; color: #a09080; letter-spacing: 1px; margin-bottom: 40px;
 }
 .show-strip span strong { color: var(--cream); font-weight: 500; }
-
-/* ── STARS DECORATION ── */
 .stars { text-align: center; font-size: 11px; letter-spacing: 8px; color: rgba(201,168,76,0.3); margin-bottom: 36px; }
-
-/* ── FILM SECTION ── */
 .film-section {
   display: grid; grid-template-columns: 1fr 1fr; gap: 28px;
   margin-bottom: 48px; align-items: start;
 }
 @media(max-width: 600px) { .film-section { grid-template-columns: 1fr; } }
-
 .film-poster {
   aspect-ratio: 2/3;
   background: var(--dark2);
   border: 1px solid rgba(201,168,76,0.15);
   border-radius: 14px; overflow: hidden;
-  position: relative;
 }
 .film-poster img { width: 100%; height: 100%; object-fit: cover; }
 .poster-placeholder {
@@ -89,24 +74,16 @@ header { text-align: center; padding: 52px 0 36px; }
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 12px; color: rgba(201,168,76,0.2);
 }
-.poster-placeholder svg { width: 48px; height: 48px; }
-.poster-placeholder p { font-size: 10px; letter-spacing: 3px; }
-
 .film-info { padding: 8px 0; }
 .film-eyebrow { font-size: 9px; letter-spacing: 5px; color: var(--gold); margin-bottom: 12px; }
 .film-title { font-family: 'Playfair Display', serif; font-size: clamp(24px, 5vw, 34px); line-height: 1.2; margin-bottom: 16px; }
 .film-meta { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
-.film-tag {
-  font-size: 10px; letter-spacing: 2px; padding: 4px 12px;
-  border: 1px solid rgba(201,168,76,0.2); border-radius: 20px; color: #a08840;
-}
+.film-tag { font-size: 10px; letter-spacing: 2px; padding: 4px 12px; border: 1px solid rgba(201,168,76,0.2); border-radius: 20px; color: #a08840; }
 .film-desc { font-size: 14px; line-height: 1.8; color: #a09080; margin-bottom: 24px; }
 .film-details { border-top: 1px solid rgba(242,234,216,0.06); padding-top: 20px; }
 .detail-row { display: flex; justify-content: space-between; font-size: 12px; padding: 8px 0; border-bottom: 1px solid rgba(242,234,216,0.04); }
 .detail-row .d-label { color: #5a5060; letter-spacing: 1px; }
 .detail-row .d-val { color: var(--cream); }
-
-/* ── FREE SEATING NOTICE ── */
 .free-seating-block {
   background: rgba(201,168,76,0.05);
   border: 1px solid rgba(201,168,76,0.15);
@@ -122,8 +99,6 @@ header { text-align: center; padding: 52px 0 36px; }
   font-size: 13px; color: var(--gold);
 }
 .seats-left-badge span { font-weight: 600; }
-
-/* ── PRICE BOX ── */
 .price-row { display: flex; gap: 14px; justify-content: center; margin: 20px 0 0; flex-wrap: wrap; }
 .price-card {
   background: rgba(242,234,216,0.04);
@@ -134,8 +109,6 @@ header { text-align: center; padding: 52px 0 36px; }
 .pc-label { font-size: 9px; letter-spacing: 3px; color: #5a5060; margin-bottom: 6px; }
 .pc-price { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--cream); }
 .pc-price span { font-size: 14px; color: var(--muted); }
-
-/* ── BOOKING CTA ── */
 .cta-section { text-align: center; margin-bottom: 56px; }
 .cta-section p { font-size: 12px; color: var(--muted); margin-bottom: 20px; letter-spacing: 1px; }
 .btn-primary {
@@ -149,8 +122,6 @@ header { text-align: center; padding: 52px 0 36px; }
 }
 .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
 .btn-primary:disabled { opacity: 0.35; cursor: not-allowed; transform: none; }
-
-/* ── PAYMENT INFO ── */
 .pay-block {
   background: rgba(242,234,216,0.03);
   border: 1px solid rgba(242,234,216,0.07);
@@ -159,8 +130,6 @@ header { text-align: center; padding: 52px 0 36px; }
 .pay-block-title { font-size: 10px; letter-spacing: 4px; color: #5a5060; margin-bottom: 16px; }
 .pay-step { display: flex; gap: 16px; margin-bottom: 14px; font-size: 13px; color: #a09080; align-items: flex-start; }
 .pay-step .ps-num { color: var(--gold); font-family: 'Playfair Display', serif; font-size: 16px; flex-shrink: 0; margin-top: -1px; }
-
-/* ── MODAL ── */
 .modal-overlay {
   position: fixed; inset: 0; z-index: 100;
   background: rgba(12,11,14,0.95);
@@ -211,8 +180,6 @@ header { text-align: center; padding: 52px 0 36px; }
 }
 .btn-secondary:hover { border-color: rgba(242,234,216,0.25); }
 .btn-full { width: 100%; text-align: center; }
-
-/* ── TICKET VIEW ── */
 .ticket-wrap { animation: fadeUp 0.35s ease; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:none} }
 .ticket {
@@ -233,14 +200,8 @@ header { text-align: center; padding: 52px 0 36px; }
 .ticket-foot { border-top: 1px dashed rgba(201,168,76,0.2); padding: 18px 30px; text-align: center; }
 .ticket-code-label { font-size: 9px; letter-spacing: 3px; color: #4a4040; margin-bottom: 8px; }
 .ticket-code { font-size: 32px; letter-spacing: 8px; color: var(--gold); font-family: 'Courier New', monospace; font-weight: bold; }
-.ticket-status-badge {
-  display: inline-block; margin-top: 12px;
-  padding: 5px 18px; border-radius: 20px; font-size: 11px; letter-spacing: 2px;
-}
+.ticket-status-badge { display: inline-block; margin-top: 12px; padding: 5px 18px; border-radius: 20px; font-size: 11px; letter-spacing: 2px; }
 .badge-pending { background: rgba(150,120,30,0.2); color: #c8a840; border: 1px solid rgba(150,120,30,0.3); }
-.badge-confirmed { background: rgba(30,100,50,0.25); color: #60c878; border: 1px solid rgba(30,100,50,0.4); }
-
-/* ── AFTER BOOKING PAY INFO ── */
 .after-book-pay {
   background: rgba(201,168,76,0.07);
   border: 1px solid rgba(201,168,76,0.18);
@@ -249,69 +210,38 @@ header { text-align: center; padding: 52px 0 36px; }
 .abp-title { font-size: 10px; letter-spacing: 4px; color: var(--gold); margin-bottom: 12px; }
 .abp-phone { font-size: 24px; letter-spacing: 3px; color: var(--cream); font-family: monospace; margin: 8px 0; }
 .abp-note { font-size: 13px; color: #a08840; }
-
-/* waiting pulse */
 .pulse { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--gold); margin-right: 8px; animation: pulse 1.5s ease-in-out infinite; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
-
-/* ── ADMIN LINK ── */
 .admin-toggle { text-align: center; margin-top: 56px; }
 .admin-toggle button { background: none; border: none; color: #1e1a24; font-size: 11px; cursor: pointer; letter-spacing: 3px; transition: color 0.2s; }
 .admin-toggle button:hover { color: #3a3040; }
-
-/* ── ADMIN PANEL ── */
 #admin-section { display: none; margin-top: 32px; }
 #admin-section.visible { display: block; }
-.admin-card {
-  background: var(--dark2); border: 1px solid rgba(242,234,216,0.07);
-  border-radius: 16px; padding: 28px; margin-bottom: 24px;
-}
+.admin-card { background: var(--dark2); border: 1px solid rgba(242,234,216,0.07); border-radius: 16px; padding: 28px; margin-bottom: 24px; }
 .admin-card-title { font-size: 10px; letter-spacing: 5px; color: var(--gold); margin-bottom: 20px; }
 .admin-stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin-bottom: 24px; }
 .a-stat { background: rgba(242,234,216,0.03); border: 1px solid rgba(242,234,216,0.07); border-radius: 12px; padding: 18px; text-align: center; }
 .a-stat .a-num { font-family: 'Playfair Display', serif; font-size: 28px; color: var(--cream); }
 .a-stat .a-lbl { font-size: 9px; letter-spacing: 2px; color: #5a5060; margin-top: 4px; }
-.booking-item {
-  background: rgba(242,234,216,0.03);
-  border: 1px solid rgba(242,234,216,0.07);
-  border-radius: 12px; padding: 18px 20px; margin-bottom: 12px;
-}
+.booking-item { background: rgba(242,234,216,0.03); border: 1px solid rgba(242,234,216,0.07); border-radius: 12px; padding: 18px 20px; margin-bottom: 12px; }
 .booking-item-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
 .booking-name { font-size: 15px; font-family: 'Playfair Display', serif; }
 .booking-code { font-size: 11px; font-family: monospace; letter-spacing: 2px; color: var(--gold); }
 .booking-meta { display: flex; gap: 20px; font-size: 12px; color: #a09080; flex-wrap: wrap; margin-bottom: 14px; }
 .booking-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-.btn-confirm {
-  background: rgba(30,100,50,0.2); border: 1px solid rgba(30,100,50,0.35);
-  border-radius: 8px; color: #60c878; padding: 8px 18px;
-  font-size: 11px; cursor: pointer; letter-spacing: 1px;
-  font-family: 'Raleway', sans-serif; transition: background 0.15s;
-}
+.btn-confirm { background: rgba(30,100,50,0.2); border: 1px solid rgba(30,100,50,0.35); border-radius: 8px; color: #60c878; padding: 8px 18px; font-size: 11px; cursor: pointer; letter-spacing: 1px; font-family: 'Raleway', sans-serif; transition: background 0.15s; }
 .btn-confirm:hover { background: rgba(30,100,50,0.35); }
-.btn-cancel-sm {
-  background: rgba(139,48,48,0.15); border: 1px solid rgba(139,48,48,0.3);
-  border-radius: 8px; color: #c06060; padding: 8px 18px;
-  font-size: 11px; cursor: pointer; letter-spacing: 1px;
-  font-family: 'Raleway', sans-serif; transition: background 0.15s;
-}
+.btn-cancel-sm { background: rgba(139,48,48,0.15); border: 1px solid rgba(139,48,48,0.3); border-radius: 8px; color: #c06060; padding: 8px 18px; font-size: 11px; cursor: pointer; letter-spacing: 1px; font-family: 'Raleway', sans-serif; transition: background 0.15s; }
 .btn-cancel-sm:hover { background: rgba(139,48,48,0.3); }
-.btn-resend {
-  background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25);
-  border-radius: 8px; color: var(--gold); padding: 8px 18px;
-  font-size: 11px; cursor: pointer; letter-spacing: 1px;
-  font-family: 'Raleway', sans-serif; transition: background 0.15s;
-}
+.btn-resend { background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25); border-radius: 8px; color: var(--gold); padding: 8px 18px; font-size: 11px; cursor: pointer; letter-spacing: 1px; font-family: 'Raleway', sans-serif; transition: background 0.15s; }
 .btn-resend:hover { background: rgba(201,168,76,0.2); }
 .status-pill { padding: 3px 12px; border-radius: 20px; font-size: 10px; letter-spacing: 2px; }
 .status-pending { background: rgba(150,120,30,0.2); color: #c8a840; border: 1px solid rgba(150,120,30,0.3); }
 .status-taken { background: rgba(30,100,50,0.2); color: #60c878; border: 1px solid rgba(30,100,50,0.35); }
 .status-cancelled { background: rgba(60,20,20,0.4); color: #804040; border: 1px solid rgba(100,40,40,0.3); }
 .no-bookings { text-align: center; padding: 40px; color: #3a3530; font-size: 13px; letter-spacing: 2px; }
-.admin-refresh { float: right; }
 .btn-ghost { background: none; border: 1px solid rgba(242,234,216,0.1); border-radius: 8px; color: var(--muted); padding: 7px 16px; font-size: 11px; cursor: pointer; font-family: 'Raleway', sans-serif; letter-spacing: 1px; transition: border-color 0.15s; }
 .btn-ghost:hover { border-color: rgba(242,234,216,0.25); }
-
-/* ── TOAST ── */
 .toast {
   position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%) translateY(20px);
   background: var(--dark2); border: 1px solid rgba(201,168,76,0.3);
@@ -320,16 +250,12 @@ header { text-align: center; padding: 52px 0 36px; }
   transition: all 0.3s ease; pointer-events: none; white-space: nowrap;
 }
 .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-
-/* ── FOOTER STARS ── */
 .footer-stars { text-align: center; margin-top: 60px; font-size: 9px; letter-spacing: 6px; color: rgba(201,168,76,0.15); }
 </style>
 </head>
 <body>
 
-<!-- ══════════════════════════ SETTINGS ══════════════════════════ -->
 <script>
-// ⚙️ НАСТРОЙКИ — измените здесь
 const SETTINGS = {
   scriptUrl: "https://script.google.com/macros/s/AKfycbyevdWcLr55M8sRJbqmr0xoAWnPBm1c3EVdBmYy6CieSpXw97AKDqtgkrtPADKi2QQ_WA/exec",
   filmTitle: "Индийское кино",
@@ -340,24 +266,20 @@ const SETTINGS = {
   venue: "Сквер им. 1 Мая",
   totalSeats: 150,
   price: 1200,
-  priceVip: 0, // если нет VIP — поставьте 0
-  phone: "+7 (923) 291-36-31", // телефон для оплаты
+  phone: "+7 (923) 291-36-31",
   adminPassword: "сеанс2026",
-  // Постер: поставьте URL картинки или оставьте пустым
   posterUrl: "https://ru-images-s.kinorium.com/movie/1080/102602.jpg?1752168019",
+  logoUrl: "https://sun9-73.userapi.com/s/v1/ig2/EuSAQl3L8H3T9zI7_mPWIZfEmR0B-2BGVtYSIpiUB_JaFL-73QxyFgpG2ZO-NBqpJUcKQUK7w6BvKtlYqHzPscg3.jpg?quality=95&as=32x22,48x34,72x50,108x75,160x112,240x168,360x251,480x335,540x377,640x447,720x503,1080x754,1233x861&from=bu&u=rcg7RQ9Hq5QPtoBwCCY1H6ESZabAiEeU0AuUq57KcVw&cs=1233x0",
 };
 </script>
-<!-- ═══════════════════════════════════════════════════════════════ -->
 
 <div class="wrap">
-
-  <!-- HEADER -->
   <header>
- <div class="logo-mark" style="width:140px;height:140px;border:none;background:none;">
-  <img src="https://sun9-73.userapi.com/s/v1/ig2/EuSAQl3L8H3T9zI7_mPWIZfEmR0B-2BGVtYSIpiUB_JaFL-73QxyFgpG2ZO-NBqpJUcKQUK7w6BvKtlYqHzPscg3.jpg?quality=95&as=32x22,48x34,72x50,108x75,160x112,240x168,360x251,480x335,540x377,640x447,720x503,1080x754,1233x861&from=bu&u=rcg7RQ9Hq5QPtoBwCCY1H6ESZabAiEeU0AuUq57KcVw&cs=1233x0" style="width:100%;height:100%;object-fit:contain;">
-</div>
-<h1 class="header-title" id="js-title">СЕАНС</h1>
-<p class="header-sub" id="js-subtitle">Кино под открытым небом</p>
+    <div class="logo-mark">
+      <img id="js-logo" src="" alt="Логотип">
+    </div>
+    <h1 class="header-title" id="js-title">СЕАНС</h1>
+    <p class="header-sub" id="js-subtitle">—</p>
     <div class="divider"></div>
     <div class="show-strip">
       <span>📅 <strong id="js-date">—</strong></span>
@@ -366,10 +288,8 @@ const SETTINGS = {
     </div>
   </header>
 
-  <!-- STARS -->
   <div class="stars">✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦</div>
 
-  <!-- FILM SECTION -->
   <div class="film-section">
     <div class="film-poster" id="js-poster-wrap">
       <div class="poster-placeholder" id="js-poster-placeholder">
@@ -397,12 +317,11 @@ const SETTINGS = {
     </div>
   </div>
 
-  <!-- FREE SEATING BLOCK -->
   <div class="free-seating-block">
     <p class="fs-title">Свободная посадка</p>
     <p class="fs-desc">Выберите любое удобное место по прибытии. Бронирование фиксирует ваше участие — занять место можно самостоятельно.</p>
-    <div id="js-seats-badge" class="seats-left-badge">загрузка...</div>
-    <div class="price-row" id="js-price-row">
+    <div id="js-seats-badge" class="seats-left-badge">—</div>
+    <div class="price-row">
       <div class="price-card highlight">
         <div class="pc-label">Место</div>
         <div class="pc-price" id="js-price">—<span> ₽</span></div>
@@ -410,46 +329,30 @@ const SETTINGS = {
     </div>
   </div>
 
-  <!-- CTA -->
   <div class="cta-section">
     <p>Заполните данные — мы пришлём билет на почту</p>
-    <button class="btn-primary" id="js-book-btn" onclick="openBookingModal()">ЗАБРОНИРОВАТЬ МЕСТО</button>
+    <button class="btn-primary" onclick="openBookingModal()">ЗАБРОНИРОВАТЬ МЕСТО</button>
   </div>
 
-  <!-- HOW IT WORKS -->
   <div class="pay-block">
     <p class="pay-block-title">КАК ЭТО РАБОТАЕТ</p>
-    <div class="pay-step">
-      <span class="ps-num">1</span>
-      <span>Нажмите «Забронировать место» и заполните свои данные. Вы получите код брони на почту.</span>
-    </div>
-    <div class="pay-step">
-      <span class="ps-num">2</span>
-      <span>Переведите оплату по номеру телефона: <strong id="js-phone-inline">—</strong>. В комментарии укажите код брони.</span>
-    </div>
-    <div class="pay-step">
-      <span class="ps-num">3</span>
-      <span>После подтверждения оплаты организатором вам придёт письмо с подтверждённым билетом.</span>
-    </div>
-    <div class="pay-step">
-      <span class="ps-num">4</span>
-      <span>Приходите в указанное время, назовите код — и занимайте любое понравившееся место!</span>
-    </div>
+    <div class="pay-step"><span class="ps-num">1</span><span>Нажмите «Забронировать место» и заполните свои данные. Вы получите код брони на почту.</span></div>
+    <div class="pay-step"><span class="ps-num">2</span><span>Переведите оплату по номеру телефона: <strong id="js-phone-inline">—</strong>. В комментарии укажите код брони.</span></div>
+    <div class="pay-step"><span class="ps-num">3</span><span>После подтверждения оплаты организатором вам придёт письмо с подтверждённым билетом.</span></div>
+    <div class="pay-step"><span class="ps-num">4</span><span>Приходите в указанное время, назовите код — и занимайте любое понравившееся место!</span></div>
   </div>
 
-  <!-- ADMIN TOGGLE -->
   <div class="admin-toggle">
-    <button onclick="toggleAdmin()">• • •</button>
+    <button onclick="toggleAdmin()">· · ·</button>
   </div>
 
-  <!-- ADMIN SECTION -->
   <div id="admin-section">
     <div class="admin-card">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
         <p class="admin-card-title" style="margin-bottom:0">ПАНЕЛЬ АДМИНИСТРАТОРА</p>
         <button class="btn-ghost" onclick="loadAdmin()">↻ Обновить</button>
       </div>
-      <div class="admin-stats-grid" id="js-admin-stats">
+      <div class="admin-stats-grid">
         <div class="a-stat"><div class="a-num" id="as-total">—</div><div class="a-lbl">Всего мест</div></div>
         <div class="a-stat"><div class="a-num" id="as-booked">—</div><div class="a-lbl">Забронировано</div></div>
         <div class="a-stat"><div class="a-num" id="as-confirmed">—</div><div class="a-lbl">Оплачено</div></div>
@@ -457,24 +360,16 @@ const SETTINGS = {
       <div id="js-bookings-list"><div class="no-bookings">загрузка...</div></div>
     </div>
   </div>
+</div>
 
-</div><!-- /wrap -->
-
-<!-- TOAST -->
 <div class="toast" id="js-toast"></div>
-
-<!-- MODAL OVERLAY (injected via JS) -->
 <div id="js-modal-root"></div>
-
-<div class="footer-stars">✦ &nbsp; CINEMA PRIVÉE &nbsp; ✦</div>
+<div class="footer-stars">✦ &nbsp; PIRIEVA EVENT &nbsp; ✦</div>
 
 <script>
-// ══════════════════════════════════════════════
 // INIT
-// ══════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', () => {
-  // Fill static content from SETTINGS
-  document.getElementById('js-title').textContent = 'СЕАНС';
+  document.getElementById('js-logo').src = SETTINGS.logoUrl;
   document.getElementById('js-subtitle').textContent = SETTINGS.filmSubtitle;
   document.getElementById('js-date').textContent = SETTINGS.date;
   document.getElementById('js-time').textContent = SETTINGS.time;
@@ -487,83 +382,57 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('js-d-venue').textContent = SETTINGS.venue;
   document.getElementById('js-price').innerHTML = SETTINGS.price + '<span> ₽</span>';
   document.getElementById('js-phone-inline').textContent = SETTINGS.phone;
-
   if (SETTINGS.posterUrl) {
-    document.getElementById('js-poster-placeholder').innerHTML = `<img src="${SETTINGS.posterUrl}" alt="Постер" style="width:100%;height:100%;object-fit:cover;">`;
+    document.getElementById('js-poster-placeholder').innerHTML = '<img src="' + SETTINGS.posterUrl + '" alt="Постер" style="width:100%;height:100%;object-fit:cover;">';
   }
-
-  // Load booking data
   loadSeatsData();
 });
 
-// ══════════════════════════════════════════════
-// LOAD SEATS
-// ══════════════════════════════════════════════
-let allBookings = [];
+// JSONP — решает CORS
+function callScript(params) {
+  return new Promise((resolve, reject) => {
+    const cbName = 'cb_' + Date.now() + '_' + Math.floor(Math.random()*9999);
+    const url = SETTINGS.scriptUrl + '?' + new URLSearchParams(Object.assign({}, params, {callback: cbName})).toString();
+    const script = document.createElement('script');
+    const timer = setTimeout(() => { cleanup(); reject(new Error('timeout')); }, 12000);
+    function cleanup() { clearTimeout(timer); delete window[cbName]; if (script.parentNode) script.parentNode.removeChild(script); }
+    window[cbName] = function(data) { cleanup(); resolve(data); };
+    script.onerror = function() { cleanup(); reject(new Error('network error')); };
+    script.src = url;
+    document.head.appendChild(script);
+  });
+}
 
-async function loadSeatsData()async function loadSeatsData() {
+// LOAD SEATS
+let allBookings = [];
+async function loadSeatsData() {
   try {
-    const res = await fetch(SETTINGS.scriptUrl + '?action=getSeats', {mode: 'no-cors'});
-    updateSeatsBadge([]);
+    const data = await callScript({ action: 'getSeats' });
+    allBookings = data.bookings || [];
+    updateSeatsBadge(allBookings);
   } catch(e) {
     updateSeatsBadge([]);
   }
 }
 
 function updateSeatsBadge(bookings) {
-  const active = bookings.filter(b => b.status !== 'cancelled').length;
+  const active = bookings.filter(function(b){ return b.status !== 'cancelled'; }).length;
   const left = SETTINGS.totalSeats - active;
-  const badge = document.getElementById('js-seats-badge');
-  badge.innerHTML = `Свободно: <span>${Math.max(0, left)}</span> из ${SETTINGS.totalSeats}`;
+  document.getElementById('js-seats-badge').innerHTML = 'Свободно: <span>' + Math.max(0, left) + '</span> из ' + SETTINGS.totalSeats;
 }
 
-// ══════════════════════════════════════════════
 // BOOKING MODAL
-// ══════════════════════════════════════════════
 function openBookingModal() {
   const root = document.getElementById('js-modal-root');
-  root.innerHTML = `
-    <div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
-      <div class="modal">
-        <div class="modal-icon">🎟</div>
-        <h2 class="modal-title">Бронирование</h2>
-        <p class="modal-sub">${SETTINGS.filmTitle} • ${SETTINGS.date} • ${SETTINGS.time}</p>
-        <div class="field-row">
-          <div class="field">
-            <label>Имя</label>
-            <input type="text" id="f-name" placeholder="Анна" autocomplete="given-name">
-          </div>
-          <div class="field">
-            <label>Фамилия</label>
-            <input type="text" id="f-surname" placeholder="Иванова" autocomplete="family-name">
-          </div>
-        </div>
-        <div class="field">
-          <label>Телефон</label>
-          <input type="tel" id="f-phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
-        </div>
-        <div class="field">
-          <label>Email — сюда придёт билет</label>
-          <input type="email" id="f-email" placeholder="anna@example.com" autocomplete="email">
-        </div>
-        <div class="price-summary">
-          <strong>Место:</strong> свободная посадка<br>
-          <strong>Стоимость:</strong> ${SETTINGS.price} ₽<br>
-          <strong>Фильм:</strong> ${SETTINGS.filmTitle}
-        </div>
-        <div class="modal-actions">
-          <button class="btn-secondary" onclick="closeModal()">Отмена</button>
-          <button class="btn-primary btn-full" id="submit-btn" onclick="submitBooking()">ПОДТВЕРДИТЬ</button>
-        </div>
-      </div>
-    </div>`;
+  root.innerHTML = '<div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)"><div class="modal"><div class="modal-icon">🎟</div><h2 class="modal-title">Бронирование</h2><p class="modal-sub">' + SETTINGS.filmTitle + ' · ' + SETTINGS.date + ' · ' + SETTINGS.time + '</p><div class="field-row"><div class="field"><label>Имя</label><input type="text" id="f-name" placeholder="Анна" autocomplete="given-name"></div><div class="field"><label>Фамилия</label><input type="text" id="f-surname" placeholder="Иванова" autocomplete="family-name"></div></div><div class="field"><label>Телефон</label><input type="tel" id="f-phone" placeholder="+7 (___) ___-__-__" autocomplete="tel"></div><div class="field"><label>Email — сюда придёт билет</label><input type="email" id="f-email" placeholder="anna@example.com" autocomplete="email"></div><div class="price-summary"><strong>Место:</strong> свободная посадка<br><strong>Стоимость:</strong> ' + SETTINGS.price + ' ₽<br><strong>Фильм:</strong> ' + SETTINGS.filmTitle + '</div><div class="modal-actions"><button class="btn-secondary" onclick="closeModal()">Отмена</button><button class="btn-primary btn-full" id="submit-btn" onclick="submitBooking()">ПОДТВЕРДИТЬ</button></div></div></div>';
 }
 
-function handleOverlayClick(e) {
-  if (e.target.id === 'modal-overlay') closeModal();
-}
-function closeModal() {
-  document.getElementById('js-modal-root').innerHTML = '';
+function handleOverlayClick(e) { if (e.target.id === 'modal-overlay') closeModal(); }
+function closeModal() { document.getElementById('js-modal-root').innerHTML = ''; }
+
+function genCode() {
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  return Array.from({length: 6}, function(){ return chars[Math.floor(Math.random() * chars.length)]; }).join('');
 }
 
 async function submitBooking() {
@@ -572,11 +441,10 @@ async function submitBooking() {
   const phone = document.getElementById('f-phone').value.trim();
   const email = document.getElementById('f-email').value.trim();
 
-  // Validation
   let ok = true;
-  [['f-name', name], ['f-surname', surname], ['f-phone', phone], ['f-email', email]].forEach(([id, val]) => {
-    const el = document.getElementById(id);
-    if (!val) { el.classList.add('error'); ok = false; }
+  [['f-name', name], ['f-surname', surname], ['f-phone', phone], ['f-email', email]].forEach(function(pair) {
+    const el = document.getElementById(pair[0]);
+    if (!pair[1]) { el.classList.add('error'); ok = false; }
     else el.classList.remove('error');
   });
   if (!email.includes('@')) { document.getElementById('f-email').classList.add('error'); ok = false; }
@@ -589,67 +457,31 @@ async function submitBooking() {
   const fullName = name + ' ' + surname;
 
   try {
-  await fetch(SETTINGS.scriptUrl + '?action=book&name=' + encodeURIComponent(fullName) + '&phone=' + encodeURIComponent(phone) + '&email=' + encodeURIComponent(email) + '&code=' + code + '&film=' + encodeURIComponent(SETTINGS.filmTitle) + '&date=' + encodeURIComponent(SETTINGS.date) + '&time=' + encodeURIComponent(SETTINGS.time) + '&price=' + SETTINGS.price, {mode: 'no-cors'});
-  showTicket({ code, name: fullName, phone, email, film: SETTINGS.filmTitle, date: SETTINGS.date, time: SETTINGS.time, price: SETTINGS.price });
-  loadSeatsData();
-} catch(e) {
-  showToast('Ошибка соединения');
-  btn.disabled = false; btn.textContent = 'ПОДТВЕРДИТЬ';
+    await callScript({
+      action: 'book',
+      name: fullName,
+      phone: phone,
+      email: email,
+      code: code,
+      film: SETTINGS.filmTitle,
+      date: SETTINGS.date,
+      time: SETTINGS.time,
+      price: SETTINGS.price
+    });
+    showTicket({ code: code, name: fullName, phone: phone, email: email, film: SETTINGS.filmTitle, date: SETTINGS.date, time: SETTINGS.time, price: SETTINGS.price });
+    loadSeatsData();
+  } catch(e) {
+    showToast('Ошибка соединения');
+    btn.disabled = false; btn.textContent = 'ПОДТВЕРДИТЬ';
+  }
 }
 
-function genCode() {
-  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-  return Array.from({length: 6}, () => chars[Math.floor(Math.random() * chars.length)]).join('');
-}
-
-// ══════════════════════════════════════════════
-// TICKET VIEW
-// ══════════════════════════════════════════════
 function showTicket(b) {
-  const root = document.getElementById('js-modal-root');
-  root.innerHTML = `
-    <div class="modal-overlay" style="align-items:flex-start;padding:20px;overflow-y:auto;">
-      <div class="modal" style="max-width:500px;margin:auto;">
-        <div class="ticket-wrap">
-          <div class="ticket">
-            <div class="ticket-head">
-              <div class="ticket-brand">CINEMA PRIVÉE • СЕАНС</div>
-              <div class="ticket-film">${b.film}</div>
-              <div class="ticket-date">${b.date} • ${b.time}</div>
-            </div>
-            <div class="ticket-body">
-              <div><div class="tf-label">ИМЯ</div><div class="tf-value">${b.name}</div></div>
-              <div><div class="tf-label">СТОИМОСТЬ</div><div class="tf-value">${b.price} ₽</div></div>
-              <div><div class="tf-label">ТЕЛЕФОН</div><div class="tf-value" style="font-size:13px;">${b.phone}</div></div>
-              <div><div class="tf-label">МЕСТО</div><div class="tf-value">Свободная</div></div>
-            </div>
-            <div class="ticket-foot">
-              <div class="ticket-code-label">КОД БРОНИ</div>
-              <div class="ticket-code">${b.code}</div>
-              <div><span class="ticket-status-badge badge-pending"><span class="pulse"></span>Ожидает оплаты</span></div>
-            </div>
-          </div>
-
-          <div class="after-book-pay">
-            <div class="abp-title">КАК ОПЛАТИТЬ</div>
-            <div class="abp-phone">${SETTINGS.phone}</div>
-            <div class="abp-note">Переведите <strong>${b.price} ₽</strong> на этот номер. В комментарии укажите код <strong>${b.code}</strong>. После проверки вам придёт подтверждение на почту.</div>
-          </div>
-
-          <div style="text-align:center;margin-bottom:8px;color:var(--muted);font-size:12px;letter-spacing:1px;">Сохраните код — он понадобится на входе</div>
-          <div style="text-align:center;">
-            <button class="btn-primary" onclick="closeModal()" style="margin-top:8px;">Готово</button>
-          </div>
-        </div>
-      </div>
-    </div>`;
+  document.getElementById('js-modal-root').innerHTML = '<div class="modal-overlay" style="align-items:flex-start;padding:20px;overflow-y:auto;"><div class="modal" style="max-width:500px;margin:auto;"><div class="ticket-wrap"><div class="ticket"><div class="ticket-head"><div class="ticket-brand">PIRIEVA EVENT · СЕАНС</div><div class="ticket-film">' + b.film + '</div><div class="ticket-date">' + b.date + ' · ' + b.time + '</div></div><div class="ticket-body"><div><div class="tf-label">ИМЯ</div><div class="tf-value">' + b.name + '</div></div><div><div class="tf-label">СТОИМОСТЬ</div><div class="tf-value">' + b.price + ' ₽</div></div><div><div class="tf-label">ТЕЛЕФОН</div><div class="tf-value" style="font-size:13px;">' + b.phone + '</div></div><div><div class="tf-label">МЕСТО</div><div class="tf-value">Свободная</div></div></div><div class="ticket-foot"><div class="ticket-code-label">КОД БРОНИ</div><div class="ticket-code">' + b.code + '</div><div><span class="ticket-status-badge badge-pending"><span class="pulse"></span>Ожидает оплаты</span></div></div></div><div class="after-book-pay"><div class="abp-title">КАК ОПЛАТИТЬ</div><div class="abp-phone">' + SETTINGS.phone + '</div><div class="abp-note">Переведите <strong>' + b.price + ' ₽</strong> на этот номер. В комментарии укажите код <strong>' + b.code + '</strong>. После проверки вам придёт подтверждение на почту.</div></div><div style="text-align:center;margin-bottom:8px;color:var(--muted);font-size:12px;letter-spacing:1px;">Сохраните код — он понадобится на входе</div><div style="text-align:center;"><button class="btn-primary" onclick="closeModal()" style="margin-top:8px;">Готово</button></div></div></div></div>';
 }
 
-// ══════════════════════════════════════════════
 // ADMIN
-// ══════════════════════════════════════════════
 let adminUnlocked = false;
-
 function toggleAdmin() {
   if (!adminUnlocked) {
     const pass = prompt('Пароль администратора:');
@@ -657,81 +489,41 @@ function toggleAdmin() {
     adminUnlocked = true;
   }
   const sec = document.getElementById('admin-section');
-  if (sec.classList.contains('visible')) {
-    sec.classList.remove('visible');
-  } else {
-    sec.classList.add('visible');
-    loadAdmin();
-  }
+  if (sec.classList.contains('visible')) { sec.classList.remove('visible'); }
+  else { sec.classList.add('visible'); loadAdmin(); }
 }
 
 async function loadAdmin() {
   document.getElementById('js-bookings-list').innerHTML = '<div class="no-bookings">Загрузка...</div>';
   try {
-    const res = await fetch(SETTINGS.scriptUrl + '?action=getSeats');
-    const data = await res.json();
-    const bookings = data.bookings || [];
-    renderAdmin(bookings);
+    const data = await callScript({ action: 'getSeats' });
+    renderAdmin(data.bookings || []);
   } catch(e) {
     document.getElementById('js-bookings-list').innerHTML = '<div class="no-bookings">Ошибка загрузки</div>';
   }
 }
 
 function renderAdmin(bookings) {
-  const total = SETTINGS.totalSeats;
-  const active = bookings.filter(b => b.status !== 'cancelled');
-  const confirmed = bookings.filter(b => b.status === 'taken');
-
-  document.getElementById('as-total').textContent = total;
-  document.getElementById('as-booked').textContent = active.length;
-  document.getElementById('as-confirmed').textContent = confirmed.length;
-
-  if (!bookings.length) {
-    document.getElementById('js-bookings-list').innerHTML = '<div class="no-bookings">Броней пока нет</div>';
-    return;
-  }
-
-  const sorted = [...bookings].sort((a, b) => {
-    const order = {pending: 0, taken: 1, cancelled: 2};
-    return (order[a.status] ?? 9) - (order[b.status] ?? 9);
-  });
-
-  document.getElementById('js-bookings-list').innerHTML = sorted.map(b => {
-    const statusLabel = b.status === 'pending' ? 'Ожидает оплаты' : b.status === 'taken' ? 'Оплачено' : 'Отменено';
-    const statusClass = b.status === 'pending' ? 'status-pending' : b.status === 'taken' ? 'status-taken' : 'status-cancelled';
-    const actions = b.status === 'pending' ? `
-      <button class="btn-confirm" onclick="adminConfirm('${b.code}')">✓ Подтвердить оплату</button>
-      <button class="btn-cancel-sm" onclick="adminCancel('${b.code}')">✕ Отменить</button>
-    ` : b.status === 'taken' ? `
-      <button class="btn-resend" onclick="adminResend('${b.code}')">↻ Повторный билет</button>
-      <button class="btn-cancel-sm" onclick="adminCancel('${b.code}')">✕ Отменить</button>
-    ` : '';
-    return `
-      <div class="booking-item">
-        <div class="booking-item-head">
-          <div>
-            <div class="booking-name">${b.name || '—'}</div>
-            <div class="booking-code">${b.code}</div>
-          </div>
-          <span class="status-pill ${statusClass}">${statusLabel}</span>
-        </div>
-        <div class="booking-meta">
-          <span>📱 ${b.phone || '—'}</span>
-          <span>💰 ${b.price} ₽</span>
-        </div>
-        <div class="booking-actions">${actions}</div>
-      </div>`;
+  document.getElementById('as-total').textContent = SETTINGS.totalSeats;
+  document.getElementById('as-booked').textContent = bookings.filter(function(b){ return b.status !== 'cancelled'; }).length;
+  document.getElementById('as-confirmed').textContent = bookings.filter(function(b){ return b.status === 'taken'; }).length;
+  if (!bookings.length) { document.getElementById('js-bookings-list').innerHTML = '<div class="no-bookings">Броней пока нет</div>'; return; }
+  const sorted = bookings.slice().sort(function(a,b){ const o={pending:0,taken:1,cancelled:2}; return (o[a.status]||9)-(o[b.status]||9); });
+  document.getElementById('js-bookings-list').innerHTML = sorted.map(function(b) {
+    const lbl = b.status==='pending'?'Ожидает оплаты':b.status==='taken'?'Оплачено':'Отменено';
+    const cls = b.status==='pending'?'status-pending':b.status==='taken'?'status-taken':'status-cancelled';
+    const acts = b.status==='pending'
+      ? '<button class="btn-confirm" onclick="adminConfirm(\''+b.code+'\')">✓ Подтвердить оплату</button><button class="btn-cancel-sm" onclick="adminCancel(\''+b.code+'\')">✕ Отменить</button>'
+      : b.status==='taken'
+      ? '<button class="btn-resend" onclick="adminResend(\''+b.code+'\')">↻ Повторный билет</button><button class="btn-cancel-sm" onclick="adminCancel(\''+b.code+'\')">✕ Отменить</button>'
+      : '';
+    return '<div class="booking-item"><div class="booking-item-head"><div><div class="booking-name">'+(b.name||'—')+'</div><div class="booking-code">'+b.code+'</div></div><span class="status-pill '+cls+'">'+lbl+'</span></div><div class="booking-meta"><span>📱 '+(b.phone||'—')+'</span><span>💰 '+b.price+' ₽</span></div><div class="booking-actions">'+acts+'</div></div>';
   }).join('');
 }
 
 async function adminConfirm(code) {
   try {
-    const res = await fetch(SETTINGS.scriptUrl, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ action: 'confirm', code })
-    });
-    const data = await res.json();
+    const data = await callScript({ action: 'confirm', code: code });
     if (data.ok) { showToast('✓ Оплата подтверждена'); loadAdmin(); loadSeatsData(); }
     else showToast(data.error || 'Ошибка');
   } catch(e) { showToast('Ошибка соединения'); }
@@ -740,12 +532,7 @@ async function adminConfirm(code) {
 async function adminCancel(code) {
   if (!confirm('Отменить бронь ' + code + '?')) return;
   try {
-    const res = await fetch(SETTINGS.scriptUrl, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ action: 'cancel', code, seatId: 'FREE' })
-    });
-    const data = await res.json();
+    const data = await callScript({ action: 'cancel', code: code });
     if (data.ok) { showToast('Бронь отменена'); loadAdmin(); loadSeatsData(); }
     else showToast(data.error || 'Ошибка');
   } catch(e) { showToast('Ошибка соединения'); }
@@ -753,28 +540,21 @@ async function adminCancel(code) {
 
 async function adminResend(code) {
   try {
-    const res = await fetch(SETTINGS.scriptUrl, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ action: 'resend', code })
-    });
-    const data = await res.json();
+    const data = await callScript({ action: 'resend', code: code });
     if (data.ok) showToast('Билет отправлен повторно');
     else showToast(data.error || 'Ошибка');
   } catch(e) { showToast('Ошибка соединения'); }
 }
 
-// ══════════════════════════════════════════════
-// TOAST
-// ══════════════════════════════════════════════
 let toastTimer;
 function showToast(msg) {
   const t = document.getElementById('js-toast');
   t.textContent = msg; t.classList.add('show');
   clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => t.classList.remove('show'), 3000);
+  toastTimer = setTimeout(function(){ t.classList.remove('show'); }, 3000);
 }
 </script>
-
 </body>
 </html>
+
+
